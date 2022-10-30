@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next dev",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:check": "prettier --check \"./**/*.{md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss}\"",
+    "prettier:format": "prettier --write \"./**/*.{md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.26",

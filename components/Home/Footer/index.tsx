@@ -20,7 +20,7 @@ function Footer({props}:any) {
         <div className="redes">
           {redes?.length &&
             redes.map((obj: any, i: number) => (
-              <Link href={obj.linkUrl}>
+              <Link href={obj.linkUrl} key = {i}>
                 <img
                   src={`${
                     process.env.REACT_APP_API || "http://localhost:1337"
