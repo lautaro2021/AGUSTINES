@@ -112,7 +112,6 @@ function GrillaCalzado({props}:any) {
       .responsive-filters::-webkit-scrollbar {
       width: 0px;
       }
-
       .checkbox-filter{
         width: 100px;
         border-top: 1px solid black;
@@ -121,6 +120,7 @@ function GrillaCalzado({props}:any) {
         align-items: flex-start;
         justify-content: flex-start;
         padding: 15px 0px;
+        border: 2px solid black;
       }
       button{
         background-color: white;
@@ -133,6 +133,8 @@ function GrillaCalzado({props}:any) {
         border-radius: 5px;
         transition: .2s;
         margin: 0px 10px;
+        font-size: 12px;
+
       }
       .active-btn{
         background-color: white;
@@ -145,6 +147,7 @@ function GrillaCalzado({props}:any) {
         border-radius: 5px;
         transition: .2s;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
+        font-size: 10px;
       }
       h3{
         font-family: 'Helvetica', sans-serif;

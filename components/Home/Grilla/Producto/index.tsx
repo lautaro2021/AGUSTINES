@@ -84,6 +84,7 @@ function Producto({props}:any) {
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         transition: .2s;
+        font-size: 12px;
       }
       .info-button:hover{
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
