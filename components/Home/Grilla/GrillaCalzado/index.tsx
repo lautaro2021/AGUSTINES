@@ -146,7 +146,7 @@ function GrillaCalzado({props}:any) {
         border-radius: 5px;
         transition: .2s;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
-        font-size: 10px;
+        font-size: 12px;
       }
       h3{
         font-family: 'Helvetica', sans-serif;
