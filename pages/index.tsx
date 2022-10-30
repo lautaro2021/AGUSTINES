@@ -64,9 +64,6 @@ export default function HomePage({nav, home}: any) {
             background-color: black;
             width: 100vw;
             height: 2vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: white;
             position: fixed;
             top: 0;
@@ -75,6 +72,8 @@ export default function HomePage({nav, home}: any) {
         h5{
           font-weight: normal !important;
           text-align: center;
+          font-size: 15px;
+          margin-top: 3px;
         }
         .main {
           display: flex;

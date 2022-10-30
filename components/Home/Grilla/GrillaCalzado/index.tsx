@@ -120,7 +120,6 @@ function GrillaCalzado({props}:any) {
         align-items: flex-start;
         justify-content: flex-start;
         padding: 15px 0px;
-        border: 2px solid black;
       }
       button{
         background-color: white;
