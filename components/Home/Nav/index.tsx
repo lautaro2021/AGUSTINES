@@ -37,6 +37,7 @@ function Nav({props}:any) {
         </div>
       </div>
       <style jsx>{`
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
         nav {
           width: 100vw;
           height: 100px;
@@ -81,9 +82,11 @@ function Nav({props}:any) {
             margin-bottom: 15px;
         }
         h5{
-          margin: 0px 20px;
-          font-family: 'Helvetica', sans-serif;
+          margin: 0px 10px;
+          font-family: 'Inter', sans-serif;
           cursor: pointer;
+          font-size: 15px;
+          font-weight: bold;
         }
       `}
       </style>
