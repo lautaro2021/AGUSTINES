@@ -19,7 +19,7 @@ function Footer({props}:any) {
         <h5>{text}</h5>
         <div className="redes">
           {redes?.length &&
-            redes.map((obj: any) => (
+            redes.map((obj: any, i: number) => (
               <Link href={obj.linkUrl}>
                 <img
                   src={`${
@@ -27,6 +27,7 @@ function Footer({props}:any) {
                   }${obj?.icon}`}
                   alt="redes"
                   style={{ width: "50px", zIndex: "500", margin: '0px 20px', cursor: 'pointer'}}
+                  key = {i}
                 />
               </Link>
             ))}

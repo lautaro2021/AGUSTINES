@@ -29,8 +29,8 @@ function Nav({props}:any) {
         )}
         <div className = 'options-div'>
         {options?.length && 
-            options.map((option:any) => (
-                <h5>{option.title.toUpperCase()}</h5>
+            options.map((option:any, i:number) => (
+                <h5 key = {i}>{option.title.toUpperCase()}</h5>
             )
             )
         }

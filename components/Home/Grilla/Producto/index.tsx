@@ -32,7 +32,7 @@ function Producto({props}:any) {
                 alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.attributes?.caption}`}
                 className = {`${i !== index && 'hidden'}`}
                 style = {{width: '100%', height: '100%', objectFit: 'cover'}}
-                
+                key = {i}
               />
             )
           })
@@ -47,8 +47,8 @@ function Producto({props}:any) {
         <h5 style = {{fontWeight: 'bold'}}>{separar(props.price)}</h5>
         <div className = 'color-cont'>
           {colorArr?.length &&
-            colorArr.map((obj:string) => (
-              <button style = {{borderRadius: '50%', backgroundColor: `#${obj}`, border: '2px solid white', width: '20px', height: '20px', margin: '0px 3px 0px 0px'}}></button>
+            colorArr.map((obj:string, i:number) => (
+              <button style = {{borderRadius: '50%', backgroundColor: `#${obj}`, border: '2px solid white', width: '20px', height: '20px', margin: '0px 3px 0px 0px'}} key = {i}></button>
             ))
           }
         </div>

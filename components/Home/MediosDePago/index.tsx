@@ -11,6 +11,7 @@ function MediosDePago({props}:any) {
         etiquetas.map((description:any, i:number) => (
           <Etiqueta
             props = {description}
+            key = {i}
           />
         ))
       }
