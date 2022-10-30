@@ -11,6 +11,7 @@ function Grilla({props}:any) {
             <h2
               onClick={() => setView(props[i].title)}
               className={view === props[i].title ? "active" : ""}
+              key = {i}
             >
               {obj.title.toUpperCase()}
             </h2>

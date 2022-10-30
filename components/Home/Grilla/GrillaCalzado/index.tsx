@@ -48,7 +48,7 @@ function GrillaCalzado({props}:any) {
       <div className='checkbox-filter'>
         {types?.length && types.map((obj:any, i:number)=>{
           return(
-              <label onClick = {() => handleActual(obj)} className = {actual === obj ? 'active' : ''}>{obj}</label>
+              <label onClick = {() => handleActual(obj)} className = {actual === obj ? 'active' : ''} key = {i}>{obj}</label>
           )
         })}
       </div>
@@ -57,7 +57,7 @@ function GrillaCalzado({props}:any) {
       <div className = 'responsive-filters'>
         {types?.length && types.map((obj:any, i:number)=>{
           return(
-            <button onClick = {() => handleActual(obj)} className = {actual === obj ? 'active-btn' : ''}>{obj}</button>
+            <button onClick = {() => handleActual(obj)} className = {actual === obj ? 'active-btn' : ''} key = {i}>{obj}</button>
           )
         })}
       </div>
