@@ -46,11 +46,12 @@ function CarrouselDos({props}:any) {
           {(index === 0 || index) &&
             productos?.map((obj: any, i:number) => {
               return (
-                <div className = {`img-div ${i === index ? 'visible' : 'no-visible'}`}>
+                <div className = {`img-div ${i === index ? 'visible' : 'no-visible'}`} key = {i}>
                   <img
                   src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.foto?.data?.attributes?.url}`}
                   alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.foto?.data?.attributes?.caption}`}
                   className = {`image-slider ${i === index ? 'visible' : 'no-visible'}`}
+                  key = {i}
                   />
                   <h4>{obj.title}</h4>
                 </div>
