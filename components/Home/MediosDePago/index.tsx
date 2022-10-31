@@ -1,6 +1,5 @@
 import React from 'react';
 import Etiqueta from './Etiqueta';
-import etiquetas from '../../../types';
 
 function MediosDePago({props}:any) {
   const {etiquetas} = props;

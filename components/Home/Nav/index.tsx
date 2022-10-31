@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
 
 function Nav({props}:any) {
     const {logo, options} = props;
