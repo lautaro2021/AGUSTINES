@@ -9,8 +9,6 @@ function Producto({props}:any) {
   const colorArr = color?.split(' ')
   const [index, setIndex] = useState(0);
 
-  console.log(index);
-
   function handleResta(){
     if(index > 0) return setIndex(index - 1);
     return setIndex(foto?.data.length - 1);
