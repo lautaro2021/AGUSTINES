@@ -9,8 +9,9 @@ import CarrouselDos from '../components/Home/CarrouselDos';
 import Banner from '../components/Home/Banner';
 import Grilla from '../components/Home/Grilla';
 import Footer from '../components/Home/Footer';
+import type { NextPage } from 'next';
 
-export default function HomePage({nav, home}: any) {
+const Home: NextPage = ({nav, home}: any) => {
   let viewArr:any = [];
   return (
     <div className = 'main'>
@@ -103,6 +104,8 @@ export default function HomePage({nav, home}: any) {
     </div>
   );
 }
+
+export default Home;
 
 export async function getStaticProps(){
     const queryNav = '/api/navs?populate[nav][populate][0]=logo&populate[nav][populate][1]=options';
