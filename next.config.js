@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  compiler: {
+    styledComponents: true,
+  },
+  images: {
+    domains: ['www.agustines.com'],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
