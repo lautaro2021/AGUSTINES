@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Flyers({props}:any) {
-    console.log(props);
   return (
     <section>
         <img

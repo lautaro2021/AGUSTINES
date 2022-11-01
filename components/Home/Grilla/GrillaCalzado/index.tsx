@@ -6,7 +6,6 @@ import {ImCross} from 'react-icons/im'
 function GrillaCalzado({props}:any) {
   const [actual, setActual] = useState('')
   const [flag, setFlag] = useState(false);
-  const [busqueda, setBusqueda] = useState('')
   const [side, setSide] = useState(false);
   let types:any = [];
   let filtered:any = [];
@@ -42,8 +41,6 @@ function GrillaCalzado({props}:any) {
   const handleSideFalse = () => {
     setSide(false)
   }
-
-  console.log(side)
 
   useEffect(() => {
     if (window.innerWidth < 650) {

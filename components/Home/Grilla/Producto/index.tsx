@@ -22,7 +22,7 @@ function Producto({props}:any) {
     <div className="main">
       {foto?.data?.map((obj: any, i: number) => {
         return (
-          <div className={`img-cont ${i !== index ? "hidden" : ""}`}>
+          <div className={`img-cont ${i !== index ? "hidden" : ""}`} key = {i}>
             <IoIosArrowBack
               onClick={handleResta}
               style={{
