@@ -21,9 +21,7 @@ function Nav({props}:any) {
         {logo && (
           <img
             alt={`${logo?.data?.attributes?.caption}`}
-            src={`${process.env.REACT_APP_API || "http://localhost:1337"}${
-              logo?.data?.attributes.url
-            }`}
+            src={process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
           />
         )}
         <div className = 'options-div'>

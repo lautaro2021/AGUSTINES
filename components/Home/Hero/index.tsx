@@ -19,7 +19,7 @@ export default function Hero({props}:any) {
   return (
     <section>
       <video
-        src={`${process.env.REACT_APP_API || 'http://localhost:1337'}${bgVideo?.data.attributes.url}`}
+        src={process.env.REACT_APP_API ? bgVideo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
         autoPlay
         loop
         muted
@@ -27,7 +27,7 @@ export default function Hero({props}:any) {
         preload="auto"
       />
       <img
-        src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${bgLogo.data.attributes.url}`}
+        src = {process.env.REACT_APP_API ? bgLogo?.data?.attributes?.url : `${'http://localhost:1337'}${bgLogo?.data?.attributes?.url}`}
         className = {anim ? 'no-active' : ''}
       />
     <style jsx>{`

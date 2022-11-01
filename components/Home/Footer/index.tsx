@@ -7,13 +7,11 @@ function Footer({props}:any) {
     <section>
       <div className="center-div">
         <img
-          src={`${process.env.REACT_APP_API || "http://localhost:1337"}${
-            logo?.data?.attributes?.url
-          }`}
+          src={process.env.REACT_APP_API ? logo?.data?.attributes?.url : `${'http://localhost:1337'}${logo?.data?.attributes?.url}`}
           alt={`${process.env.REACT_APP_API || "http://localhost:1337"}${
             logo?.data?.attributes?.caption
           }`}
-          style={{ width: "150px" }}
+          style={{ width: "100px" }}
         />
 
         <h5>{text}</h5>
@@ -22,12 +20,11 @@ function Footer({props}:any) {
             redes.map((obj: any, i: number) => (
               <Link href={obj.linkUrl} key = {i}>
                 <img
-                  src={`${
-                    process.env.REACT_APP_API || "http://localhost:1337"
-                  }${obj?.icon}`}
+                  src={process.env.REACT_APP_API ? obj?.icon : `${'http://localhost:1337'}${obj?.icon}`}
                   alt="redes"
                   style={{ width: "50px", zIndex: "500", margin: '0px 20px', cursor: 'pointer'}}
                   key = {i}
+                  className = 'icon-img'
                 />
               </Link>
             ))}
@@ -70,6 +67,11 @@ function Footer({props}:any) {
           }
           h5{
             text-align: center;
+            margin: 15px 0;
+            font-size: 15px;
+          }
+          .icon-img{
+            width: 45px !important;
           }
         }
       `}</style>

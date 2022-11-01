@@ -6,9 +6,7 @@ function Etiqueta({props}:any) {
     <div key={id} className="main-div">
       <div className = 'img-cont'>
         <img
-          src={`${process.env.REACT_APP_API || "http://localhost:1337"}${
-            logo?.data?.attributes?.url
-          }`}
+          src={process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
           alt={`${process.env.REACT_APP_API || "http://localhost:1337"}${
             logo?.data?.attributes?.caption
           }`}

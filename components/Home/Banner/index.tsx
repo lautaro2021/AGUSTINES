@@ -18,18 +18,17 @@ function Banner({props}:any) {
     window.addEventListener('resize', windowController);
   }, []);
 
-
   return (
     <div>
     {!flag 
     ?
     <img
-    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.url}`}
+    src = {  process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
     alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.caption}`}
     />
     :
     <img
-    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.foto2.data?.attributes?.url}`}
+    src = {  process.env.REACT_APP_API ? props?.foto2?.data?.attributes?.url : `${'http://localhost:1337'}${props?.foto2?.data?.attributes?.url}`}
     alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.foto2.data?.attributes?.caption}`}
     className = 'foto2'
     />

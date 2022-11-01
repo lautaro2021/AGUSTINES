@@ -12,7 +12,7 @@ import Footer from '../components/Home/Footer';
 import type { NextPage } from 'next';
 
 const Home: NextPage = ({nav, home}: any) => {
-  // process.env.REACT_APP_API = 'https://agustines.herokuapp.com/'
+  process.env.REACT_APP_API = 'https://agustines.herokuapp.com'
   let viewArr:any = [];
   return (
     <div className = 'main'>
@@ -29,7 +29,7 @@ const Home: NextPage = ({nav, home}: any) => {
         ></link>
       </Head>
       <div className = 'descuentos'>
-        <h5>30% OFF EN LA SEGUNDA UNIDAD - ENVIOS GRATIS DESDE $15000</h5>
+        <h5>30% OFF EN LA SEGUNDA UNIDAD</h5>
       </div>
       <Nav props={nav} />
       {home?.length &&
@@ -99,6 +99,7 @@ const Home: NextPage = ({nav, home}: any) => {
             width: 100%;
             text-align: center;
             font-size: 3vw;
+            margin: 0;
           }
         }
       `}</style>
