@@ -116,8 +116,8 @@ export async function getStaticProps(){
     const responseHome = await axios(`${queryHome}`)
     return {
         props: {
-            home: responseHome?.data?.data[0]?.attributes?.home,
-            nav: responseNav?.data?.data[0]?.attributes?.nav || {}
+            home: responseHome.data.data[0].attributes.home || null,
+            nav: responseNav.data.data[0]?.attributes?.nav || null
         }
     }
 };
