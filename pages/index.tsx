@@ -12,6 +12,7 @@ import Footer from '../components/Home/Footer';
 import type { NextPage } from 'next';
 
 const Home: NextPage = ({nav, home}: any) => {
+  // process.env.REACT_APP_API = 'https://agustines.herokuapp.com/'
   let viewArr:any = [];
   return (
     <div className = 'main'>
@@ -111,12 +112,12 @@ export async function getStaticProps(){
     const queryNav = 'api/navs?populate[nav][populate][0]=logo&populate[nav][populate][1]=options';
     const responseNav = await axios(`${queryNav}`);
 
-    const queryHome = '/api/homes?populate[home][populate][0]=logo&populate[home][populate][1]=etiquetas.logo&populate[home][populate][2]=bgVideo&populate[home][populate][3]=bgLogo&populate[home][populate][4]=foto1&populate[home][populate][5]=foto2&populate[home][populate][6]=productos.foto&populate[home][populate][7]=productos.fotoHover&populate[home][populate][8]=carImg&populate[home][populate][9]=producto.foto&populate[home][populate][10]=producto.fotoHover';
+    const queryHome = 'api/homes?populate[home][populate][0]=logo&populate[home][populate][1]=etiquetas.logo&populate[home][populate][2]=bgVideo&populate[home][populate][3]=bgLogo&populate[home][populate][4]=foto1&populate[home][populate][5]=foto2&populate[home][populate][6]=productos.foto&populate[home][populate][7]=productos.fotoHover&populate[home][populate][8]=carImg&populate[home][populate][9]=producto.foto&populate[home][populate][10]=producto.fotoHover';
     const responseHome = await axios(`${queryHome}`)
     return {
         props: {
-            home: responseHome.data.data[0].attributes.home,
-            nav: responseNav.data.data[0].attributes.nav
+            home: responseHome?.data?.data[0]?.attributes?.home,
+            nav: responseNav?.data?.data[0]?.attributes?.nav || {}
         }
     }
 };

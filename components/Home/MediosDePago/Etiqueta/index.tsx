@@ -4,6 +4,7 @@ function Etiqueta({props}:any) {
   const {id, title, description, logo} = props;
   return (
     <div key={id} className="main-div">
+      <div className = 'img-cont'>
         <img
           src={`${process.env.REACT_APP_API || "http://localhost:1337"}${
             logo?.data?.attributes?.url
@@ -12,7 +13,8 @@ function Etiqueta({props}:any) {
             logo?.data?.attributes?.caption
           }`}
         />
-        <h4>{title.toUpperCase()}</h4>
+      </div>
+      <h4>{title.toUpperCase()}</h4>
       <p>{description}</p>
       <style jsx>{`
         .main-div {
@@ -25,12 +27,19 @@ function Etiqueta({props}:any) {
           text-align: center;
           margin: 0 35px;
         }
+        .img-cont{
+          width: 100%;
+          height: 50%;
+        }
         img {
-          width: 40px;
+          width: 50px;
           margin-top: 15%;
         }
+        h4{
+          margin-top: 15px;
+        }
         p {
-          height: 30%;
+          height: 50%;
         }
       `}</style>
     </div>
