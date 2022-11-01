@@ -24,8 +24,8 @@ function Banner({props}:any) {
     {!flag 
     ?
     <img
-    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.logo.data?.attributes?.url}`}
-    alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.logo.data?.attributes?.caption}`}
+    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.url}`}
+    alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.caption}`}
     />
     :
     <img
