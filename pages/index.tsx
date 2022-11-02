@@ -12,7 +12,7 @@ import Footer from '../components/Home/Footer';
 import type { NextPage } from 'next';
 
 const Home: NextPage = ({nav, home}: any) => {
-  // process.env.REACT_APP_API = 'https://agustines.herokuapp.com'
+  process.env.REACT_APP_API = 'https://agustines.herokuapp.com'
   let viewArr:any = [];
   return (
     <div className = 'main'>
