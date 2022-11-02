@@ -155,10 +155,10 @@ function GrillaCalzado({props}:any) {
       .side{
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
         background-color: white;
-        width: 60%;
-        height: 100%;
+        width: 70%;
+        height: 115%;
         position: absolute;
-        top: 15px;
+        top: -50px;
         left: -24px;
         z-index: 600;
         animation: mover .5s ease;
