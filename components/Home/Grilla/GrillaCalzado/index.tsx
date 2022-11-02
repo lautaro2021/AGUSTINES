@@ -157,9 +157,6 @@ function GrillaCalzado({props}:any) {
         margin: 0px 5px;
         cursor: pointer
       }
-      label:hover{
-        font-weight: bold;
-      }
       .active{
         margin: 0px 5px;
         cursor: pointer;
@@ -208,6 +205,11 @@ function GrillaCalzado({props}:any) {
         }
         to{
           left: -400px
+        }
+      }
+      @media screen and (min-width: 651px){
+        label:hover{
+          font-weight: bold;
         }
       }
       @media screen and (max-width: 1000px){
