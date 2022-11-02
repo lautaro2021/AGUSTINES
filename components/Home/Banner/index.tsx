@@ -25,12 +25,14 @@ function Banner({props}:any) {
     <img
     src = {  process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
     alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.caption}`}
+    loading = 'lazy'
     />
     :
     <img
     src = {  process.env.REACT_APP_API ? props?.foto2?.data?.attributes?.url : `${'http://localhost:1337'}${props?.foto2?.data?.attributes?.url}`}
     alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.foto2.data?.attributes?.caption}`}
     className = 'foto2'
+    loading = 'lazy'
     />
     }
     

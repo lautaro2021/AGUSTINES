@@ -6,7 +6,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['agustines.herokuapp.com'],
+    domains: ['res.cloudinary.com'],
   },
 };
 

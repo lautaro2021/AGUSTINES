@@ -45,6 +45,7 @@ function Producto({props}:any) {
               className={`${i !== index && "hidden"}`}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               key={i}
+              loading = 'lazy'
             />
             <IoIosArrowForward
               onClick={handleSuma}

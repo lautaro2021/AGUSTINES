@@ -52,6 +52,7 @@ function CarrouselDos({props}:any) {
                   alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.foto?.data?.attributes?.caption}`}
                   className = {`image-slider ${i === index ? 'visible' : 'no-visible'}`}
                   key = {i}
+                  loading = 'lazy'
                   />
                   <h4>{obj.title}</h4>
                 </div>
