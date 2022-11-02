@@ -21,7 +21,6 @@ const Home: NextPage = ({nav, home}: any) => {
   const handleSocial = () => {
     setSocial(!social ? true : false);
   }
-  console.log(social)
   process.env.REACT_APP_API = 'https://agustines.herokuapp.com'
   let viewArr:any = [];
   return (
