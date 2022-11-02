@@ -4,7 +4,7 @@ import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import separar from '../price';
 
 function Producto({props}:any) {
-  const productInfo = `https://api.whatsapp.com/send?phone=3413880895&text=Hola, necesito mas informacion sobre el articulo ${props.title}`
+  const productInfo = `https://api.whatsapp.com/send?phone=3417487004&text=Hola, necesito mas informacion sobre el articulo ${props.title}`
   const {foto, color} = props;
   const colorArr = color?.split(' ')
   const [index, setIndex] = useState(0);
