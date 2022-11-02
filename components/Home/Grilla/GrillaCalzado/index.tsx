@@ -7,6 +7,9 @@ function GrillaCalzado({props}:any) {
   const [actual, setActual] = useState('')
   const [flag, setFlag] = useState(false);
   const [side, setSide] = useState(false);
+  const [buscar, setBuscar] = useState('')
+  const [busqueda, setBusqueda] = useState<any>([])
+
   let types:any = [];
   let filtered:any = [];
 
@@ -42,12 +45,27 @@ function GrillaCalzado({props}:any) {
     setSide(false)
   }
 
+  const handleBusqueda = (e:any) => {
+    setBuscar(e.target.value);
+  }
+
   useEffect(() => {
     if (window.innerWidth < 650) {
       setFlag(true);
     }
     window.addEventListener('resize', windowController);
   }, []);
+  
+  useEffect(() => {
+    props.producto.map((prod:any) => {
+      if(prod.title.toLowerCase().includes(buscar.toLowerCase())){
+        if(!busqueda.includes(prod)){
+          setBusqueda([...busqueda, prod])
+        }
+      };
+    })
+    if(buscar === '') setBusqueda([])
+  }, [buscar])
 
   return (
     <section>
@@ -69,22 +87,15 @@ function GrillaCalzado({props}:any) {
       </div>
       }
       <div className='productos'>
-      {!filtered?.length && props.producto?.length && props.producto?.map((obj:any, i:number) => {
-        return (
-          <Producto key = {i} props = {obj}/>
-        )
-      })}
-      {filtered?.length && filtered.map((obj:any, i:number) => {
-        return (
-          <Producto key = {i} props = {obj}/>
-        )
-      })}
+      {!busqueda?.length && !filtered?.length ? props.producto?.map((obj:any, i:number) => <Producto key = {i} props = {obj}/>) : null}
+      {!busqueda?.length && filtered?.length ? filtered.map((obj:any, i:number) => <Producto key = {i} props = {obj}/>) : null}
+      {busqueda?.length ? busqueda.map((obj:any, i:number) => <Producto key = {i} props = {obj}/>) : null}
       </div>
       {side && 
       <div className = 'side'>
-        <ImCross style={{width: '20px', height: '20px', position: 'absolute', top: '3%', right: '5%'}} onClick = {handleSideFalse}/>
+        <ImCross style={{width: '20px', height: '20px', position: 'absolute', top: '25px', right: '15px'}} onClick = {handleSideFalse}/>
         <div className = 'side-info'>
-          <input placeholder='Buscar por nombre..'></input>
+          <input placeholder='Buscar por nombre..' onChange={handleBusqueda} value = {buscar}></input>
           <h3 style = {{borderBottom: '1px solid black', marginTop: '15px'}}>Filtrar por</h3>
           {types?.length && types.map((obj:any, i:number)=>{
             return(
@@ -150,15 +161,17 @@ function GrillaCalzado({props}:any) {
         font-weight: bold;
       }
       .active{
+        margin: 0px 5px;
+        cursor: pointer;
         font-weight: bold;
       }
       .side{
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
         background-color: white;
         width: 70%;
-        height: 115%;
+        height: 100%;
         position: absolute;
-        top: -50px;
+        top: 0px;
         left: -24px;
         z-index: 600;
         animation: mover .5s ease;

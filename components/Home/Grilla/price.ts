@@ -3,7 +3,7 @@ export default function separar(number: number) {
   if (toString.length >= 4) {
     let n = [];
     let counterArr = 0;
-    for (let i = toString.length - 1; i >= 0; i--) {
+    for (let i = toString?.length - 1; i >= 0; i--) {
       if (counterArr === 3) {
         n.unshift(".");
       }

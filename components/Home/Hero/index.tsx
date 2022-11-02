@@ -19,7 +19,7 @@ export default function Hero({props}:any) {
   return (
     <section>
       <video
-        src={process.env.REACT_APP_API ? bgVideo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
+        src={process.env.REACT_APP_API ? bgVideo?.data?.attributes?.url : `${'http://localhost:1337'}${bgVideo?.data?.attributes?.url}`}
         autoPlay
         loop
         muted
