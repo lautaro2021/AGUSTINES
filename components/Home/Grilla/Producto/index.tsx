@@ -82,8 +82,7 @@ function Producto({props}:any) {
                   borderRadius: "50%",
                   backgroundColor: `#${obj}`,
                   border: "2px solid white",
-                  maxWidth: "6%",
-                  width: '100%',
+                  width: "20px",
                   height: "20px",
                   margin: "0px 3px 0px 0px",
                 }}
@@ -117,8 +116,8 @@ function Producto({props}:any) {
           background-color: white;
           font-weight: bold;
           font-family: "Inter", sans-serif;
-          width: 20%;
-          height: 10%;
+          width: 60px;
+          height: 35px;
           cursor: pointer;
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 5px;
