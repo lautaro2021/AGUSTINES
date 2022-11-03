@@ -150,11 +150,11 @@ function Producto({props}:any) {
           padding: 10px;
         }
         .color-button{
-          border: 2px solid white,
-          width: 20px !important,
-          height: 20px !important,
-          margin: 0px 3px 0px 0px,
-          border-radius: 50%,
+          border: 2px solid white;
+          width: 20px !important;
+          height: 20px !important;
+          margin: 0px 3px 0px 0px;
+          border-radius: 50%;
         }
         @media screen and (max-width: 1215px) and (min-width: 1000px) {
           .main {
