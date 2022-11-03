@@ -114,7 +114,7 @@ const Home: NextPage = ({nav, home}: any) => {
             border-radius: 50%;
             background-color: white;
             position: fixed;
-            z-index: 1000;
+            z-index: 950;
             box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;

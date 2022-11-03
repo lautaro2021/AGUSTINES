@@ -79,13 +79,9 @@ function Producto({props}:any) {
             colorArr.map((obj: string, i: number) => (
               <button
                 style={{
-                  borderRadius: "50%",
                   backgroundColor: `#${obj}`,
-                  border: "2px solid white",
-                  width: "20px",
-                  height: "20px",
-                  margin: "0px 3px 0px 0px",
                 }}
+                className = 'color-button'
                 key={i}
               ></button>
             ))}
@@ -152,6 +148,13 @@ function Producto({props}:any) {
           margin: 0;
           padding: 0;
           padding: 10px;
+        }
+        .color-button{
+          border: 2px solid white,
+          width: 20px !important,
+          height: 20px !important,
+          margin: 0px 3px 0px 0px,
+          border-radius: 50%,
         }
         @media screen and (max-width: 1215px) and (min-width: 1000px) {
           .main {
