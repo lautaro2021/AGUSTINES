@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, {useState} from 'react';
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io';
 import separar from '../price';
+import Image from 'next/image';
 
 function Producto({props}:any) {
   const productInfo = `https://api.whatsapp.com/send?phone=3417487004&text=Hola, necesito mas informacion sobre el articulo ${props.title}`
@@ -33,7 +34,7 @@ function Producto({props}:any) {
                 zIndex: "500",
               }}
             />
-            <img
+            <Image
               src={
                 process.env.REACT_APP_API
                   ? obj?.attributes?.url
@@ -43,9 +44,15 @@ function Producto({props}:any) {
                 obj?.attributes?.caption
               }`}
               className={`${i !== index && "hidden"}`}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
               key={i}
-              loading = 'lazy'
+              layout='fill'
+              objectFit='cover'
+              placeholder='blur'
+              blurDataURL={
+                process.env.REACT_APP_API
+                  ? obj?.attributes?.url
+                  : `${"http://localhost:1337"}${obj?.attributes?.url}`
+              }
             />
             <IoIosArrowForward
               onClick={handleSuma}

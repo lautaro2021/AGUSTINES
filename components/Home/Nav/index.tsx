@@ -43,7 +43,7 @@ function Nav({props}:any) {
           justify-content: center;
           background-color: white;
           position: fixed;
-          top: 2vh;
+          top: 35px;
           font-weight: normal !important;
           z-index: 1000;
         }
@@ -54,7 +54,7 @@ function Nav({props}:any) {
           align-items: center;
           justify-content: center;
           position: fixed;
-          top: 2vh;
+          top: 35px;
           box-shadow: 2px 2px 5px #d3d3d3;
           background-color: white;
         }
@@ -84,6 +84,14 @@ function Nav({props}:any) {
           cursor: pointer;
           font-size: 15px;
           font-weight: bold;
+        }
+        @media screen (max-width: 500px){
+          nav{
+            top: 25px;
+          }
+          .active-nav{
+            top: 25px;
+          }
         }
       `}
       </style>

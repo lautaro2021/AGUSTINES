@@ -166,7 +166,7 @@ function GrillaCalzado({props}:any) {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
         background-color: white;
         width: 70%;
-        height: 100%;
+        height: 500px;
         position: absolute;
         top: 0px;
         left: -24px;

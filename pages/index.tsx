@@ -89,17 +89,21 @@ const Home: NextPage = ({nav, home}: any) => {
         .descuentos {
           background-color: black;
           width: 100vw;
-          height: 2vh;
+          height: 35px;
           color: white;
           position: fixed;
           top: 0;
           z-index: 1000;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         h5 {
           font-weight: normal !important;
           text-align: center;
           font-size: 15px;
-          margin-top: 3px;
+          margin: 0;
         }
         .main {
           display: flex;
@@ -156,10 +160,12 @@ const Home: NextPage = ({nav, home}: any) => {
             gap: 10px;
           }
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 500px) {
+          .descuentos{
+            height: 25px;
+          }
           h5 {
             width: 100%;
-            text-align: center;
             font-size: 3vw;
             margin: 0;
           }

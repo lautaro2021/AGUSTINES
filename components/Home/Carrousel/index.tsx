@@ -85,6 +85,7 @@ function Carrousel({props}:any) {
         align-items: center;
         justify-content: center;
         margin-left: 24px;
+        position: relative;
       }
       .carImg{
         transition: .2s;
