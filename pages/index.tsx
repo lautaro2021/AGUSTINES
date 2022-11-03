@@ -40,9 +40,6 @@ const Home: NextPage = ({nav, home}: any) => {
           crossOrigin="anonymous"
         ></link>
       </Head>
-      <div className="descuentos">
-        <h5>30% OFF EN LA SEGUNDA UNIDAD</h5>
-      </div>
       <Nav props={nav} />
       <div className="redes-responsive" onClick={handleSocial}>
         <FiMoreHorizontal style={{ width: "40px", height: "40px" }} />
@@ -86,25 +83,6 @@ const Home: NextPage = ({nav, home}: any) => {
           }
         })}
       <style jsx>{`
-        .descuentos {
-          background-color: black;
-          width: 100vw;
-          height: 2%;
-          color: white;
-          position: fixed;
-          top: 0;
-          z-index: 1000;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        h5 {
-          font-weight: normal !important;
-          text-align: center;
-          font-size: 15px;
-          margin: 0;
-        }
         .main {
           display: flex;
           justify-content: center;
@@ -158,16 +136,6 @@ const Home: NextPage = ({nav, home}: any) => {
             align-items: center;
             justify-content: center;
             gap: 10px;
-          }
-        }
-        @media screen and (max-width: 500px) {
-          .descuentos{
-            height: 25px;
-          }
-          h5 {
-            width: 100%;
-            font-size: 3vw;
-            margin: 0;
           }
         }
       `}</style>
