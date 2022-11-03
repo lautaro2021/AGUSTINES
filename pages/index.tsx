@@ -89,7 +89,7 @@ const Home: NextPage = ({nav, home}: any) => {
         .descuentos {
           background-color: black;
           width: 100vw;
-          height: 35px;
+          height: 2%;
           color: white;
           position: fixed;
           top: 0;

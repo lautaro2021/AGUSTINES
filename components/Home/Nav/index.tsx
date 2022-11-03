@@ -43,7 +43,7 @@ function Nav({props}:any) {
           justify-content: center;
           background-color: white;
           position: fixed;
-          top: 35px;
+          top: 2%;
           font-weight: normal !important;
           z-index: 1000;
         }
@@ -54,7 +54,7 @@ function Nav({props}:any) {
           align-items: center;
           justify-content: center;
           position: fixed;
-          top: 35px;
+          top: 2%;
           box-shadow: 2px 2px 5px #d3d3d3;
           background-color: white;
         }
