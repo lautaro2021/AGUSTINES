@@ -3,7 +3,6 @@ import Producto from '../Producto';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {ImCross} from 'react-icons/im';
 
-
 function GrillaCalzado({props}:any) {
   const [actual, setActual] = useState('')
   const [side, setSide] = useState(false);
