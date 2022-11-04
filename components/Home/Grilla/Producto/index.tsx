@@ -178,13 +178,6 @@ function Producto({props}:any) {
             width: 100%;
             height: 500px;
           }
-          .color-button{
-          border: 2px solid white;
-          width: 20px !important;
-          height: 20px !important;
-          margin: 0px 3px 0px 0px;
-          border-radius: 50%;
-        }
         }
       `}</style>
     </div>
