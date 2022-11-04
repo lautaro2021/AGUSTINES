@@ -112,7 +112,7 @@ function Producto({props}:any) {
           background-color: white;
           font-weight: bold;
           font-family: "Inter", sans-serif;
-          width: 60px;
+          width: 70px;
           height: 35px;
           cursor: pointer;
           border: 1px solid rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@ function Producto({props}:any) {
           width: 20px !important;
           height: 20px !important;
           margin: 0px 3px 0px 0px;
-          border-radius: 50%;
+          border-radius: 10px;
         }
         @media screen and (max-width: 1215px) and (min-width: 1000px) {
           .main {
