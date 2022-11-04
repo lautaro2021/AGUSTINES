@@ -18,7 +18,7 @@ function Producto({props}:any) {
     if(index < foto?.data.length - 1) return setIndex(index + 1);
     return setIndex(0);
   }
-
+  
   return (
     <div className="main">
       {foto?.data?.map((obj: any, i: number) => {
