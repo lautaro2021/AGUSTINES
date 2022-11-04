@@ -69,9 +69,9 @@ function GrillaCalzado({props}:any) {
 
   return (
     <section>
-      {!flag 
+      {window.innerWidth > 650
       ?
-      <div className='filters'>
+      <div className='filters' style = {flag ? {display: 'hidden'} : {}}>
       <h3>Filtrar por</h3>
       <div className='checkbox-filter'>
         {types?.length && types.map((obj:any, i:number)=>{
