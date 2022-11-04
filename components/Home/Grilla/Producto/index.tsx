@@ -65,7 +65,10 @@ function Producto({props}:any) {
               }}
             />
             <Link href={productInfo}>
-              <button className="info-button">+ INFO</button>
+              <button className="info-button">
+                <span>+</span>
+                <span>INFO</span>
+              </button>
             </Link>
           </div>
         );
@@ -112,13 +115,17 @@ function Producto({props}:any) {
           background-color: white;
           font-weight: bold;
           font-family: "Inter", sans-serif;
-          width: 70px;
+          width: 60px;
           height: 35px;
           cursor: pointer;
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 5px;
           transition: 0.2s;
           font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: nowrap;
         }
         .info-button:hover {
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
