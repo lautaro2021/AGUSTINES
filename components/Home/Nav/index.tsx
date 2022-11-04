@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 function Nav({props}:any) {
     const {logo, options} = props;
-
     const [boolean, setBoolean] = useState(false);
+    
     const scrollChange = () => {
         if(window.scrollY > 0) {
             setBoolean(true);
