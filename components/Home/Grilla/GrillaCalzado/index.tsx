@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Producto from '../Producto';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {ImCross} from 'react-icons/im';
+import sizeController from '../../../sizeController';
 
 function GrillaCalzado({props}:any) {
   const [actual, setActual] = useState('')
   const [side, setSide] = useState(false);
   const [buscar, setBuscar] = useState('')
   const [busqueda, setBusqueda] = useState<any>([]);
-  const width = 640;
+  const {width} = sizeController();
 
   let types:any = [];
   let filtered:any = [];
