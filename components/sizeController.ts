@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 function getWindowDimensions() {
-  /*eslint-disable*/
-  const { innerWidth: width, innerHeight: height } = window;
+  let width = (typeof window !== 'undefined') && window.innerWidth;
+  let height = (typeof window !== 'undefined') && window.innerHeight;
   return {
     width,
     height

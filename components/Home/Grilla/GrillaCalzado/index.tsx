@@ -9,7 +9,7 @@ function GrillaCalzado({props}:any) {
   const [side, setSide] = useState(false);
   const [buscar, setBuscar] = useState('')
   const [busqueda, setBusqueda] = useState<any>([]);
-  const {width} = sizeController();
+  const {width} = sizeController()
 
   let types:any = [];
   let filtered:any = [];
@@ -55,7 +55,7 @@ function GrillaCalzado({props}:any) {
 
   return (
     <section>
-      {width > 650
+      {width && width > 650
       ?
       <div className='filters'>
       <h3>Filtrar por</h3>
