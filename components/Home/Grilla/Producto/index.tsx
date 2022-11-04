@@ -158,7 +158,8 @@ function Producto({props}:any) {
         }
         .color-button{
           border: 2px solid white;
-          width: 20px !important;
+          max-width: 20px !important;
+          width: 100%;
           height: 20px !important;
           margin: 0px 3px 0px 0px;
           border-radius: 10px;
