@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import Producto from '../Producto';
 import {GiHamburgerMenu} from 'react-icons/gi';
-import {ImCross} from 'react-icons/im'
+import {ImCross} from 'react-icons/im';
+import sizeController from '../../../sizeController';
 
 function GrillaCalzado({props}:any) {
   const [actual, setActual] = useState('')
-  const [flag, setFlag] = useState(false);
   const [side, setSide] = useState(false);
   const [buscar, setBuscar] = useState('')
-  const [busqueda, setBusqueda] = useState<any>([])
+  const [busqueda, setBusqueda] = useState<any>([]);
+  const {width} = sizeController();
 
   let types:any = [];
   let filtered:any = [];
@@ -23,14 +24,6 @@ function GrillaCalzado({props}:any) {
       prod.type === actual && filtered.push(prod);
     })
   }
-
-  const windowController = () => {
-    if (window.innerWidth < 650) {
-      setFlag(true);
-    } else {
-      setFlag(false);
-    }
-  };
 
   const handleActual = (obj:any) => {
     setActual(
@@ -50,13 +43,6 @@ function GrillaCalzado({props}:any) {
   }
 
   useEffect(() => {
-    if (window.innerWidth < 650) {
-      setFlag(true);
-    }
-    window.addEventListener('resize', windowController);
-  }, []);
-  
-  useEffect(() => {
     props.producto.map((prod:any) => {
       if(prod.title.toLowerCase().includes(buscar.toLowerCase())){
         if(!busqueda.includes(prod)){
@@ -69,9 +55,9 @@ function GrillaCalzado({props}:any) {
 
   return (
     <section>
-      {window.innerWidth > 650
+      {width > 650
       ?
-      <div className='filters' style = {flag ? {display: 'hidden'} : {}}>
+      <div className='filters'>
       <h3>Filtrar por</h3>
       <div className='checkbox-filter'>
         {types?.length && types.map((obj:any, i:number)=>{
