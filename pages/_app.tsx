@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import axios from 'axios';
+import { Analytics } from '@vercel/analytics/react';
 
 const theme = {
   colors: {
@@ -36,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
+        <Analytics/>
       </ThemeProvider>
     </>
   );
