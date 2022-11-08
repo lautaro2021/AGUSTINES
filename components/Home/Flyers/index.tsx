@@ -4,11 +4,11 @@ function Flyers({props}:any) {
   return (
     <section>
         <img
-        src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props.foto1?.data?.attributes?.url}`}
+        src = {process.env.REACT_APP_API ? props?.foto1?.data?.attributes?.url : `${'http://localhost:1337'}${props?.foto1?.data?.attributes?.url}`}
         alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props.foto1?.data?.attributes?.caption}`}   
         ></img>
         <img
-        src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props.foto2?.data?.attributes?.url}`}
+        src = {process.env.REACT_APP_API ? props?.foto2?.data?.attributes?.url : `${'http://localhost:1337'}${props?.foto2?.data?.attributes?.url}`}
         alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props.foto2?.data?.attributes?.caption}`}   
         ></img>
     <style jsx>{`

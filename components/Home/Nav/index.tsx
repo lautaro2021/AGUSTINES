@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 function Nav({props}:any) {
     const {logo, options} = props;
-    
     const [boolean, setBoolean] = useState(false);
+    
     const scrollChange = () => {
         if(window.scrollY > 0) {
             setBoolean(true);
@@ -21,9 +21,7 @@ function Nav({props}:any) {
         {logo && (
           <img
             alt={`${logo?.data?.attributes?.caption}`}
-            src={`${process.env.REACT_APP_API || "http://localhost:1337"}${
-              logo?.data?.attributes.url
-            }`}
+            src={process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
           />
         )}
         <div className = 'options-div'>
@@ -45,7 +43,7 @@ function Nav({props}:any) {
           justify-content: center;
           background-color: white;
           position: fixed;
-          top: 2vh;
+          top: 0;
           font-weight: normal !important;
           z-index: 1000;
         }
@@ -56,7 +54,7 @@ function Nav({props}:any) {
           align-items: center;
           justify-content: center;
           position: fixed;
-          top: 2vh;
+          top: 0;
           box-shadow: 2px 2px 5px #d3d3d3;
           background-color: white;
         }

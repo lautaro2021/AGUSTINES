@@ -37,7 +37,7 @@ function Carrousel({props}:any) {
     <section>
       <div className = 'center-div'>
         <img
-          src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${carImg?.data?.attributes?.url}`}
+          src = {process.env.REACT_APP_API ? carImg?.data?.attributes?.url : `${'http://localhost:1337'}${carImg?.data?.attributes?.url}`}
           alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${carImg?.data?.attributes?.caption}`}
           className = 'carImg'
         />
@@ -48,10 +48,11 @@ function Carrousel({props}:any) {
               return (
                 <div className = {`img-div ${i === index ? 'visible' : 'no-visible'}`} key = {i}>
                   <img
-                  src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.foto?.data?.attributes?.url}`}
+                  src = {process.env.REACT_APP_API ? obj?.foto?.data?.attributes?.url : `${'http://localhost:1337'}${obj?.foto?.data?.attributes?.url}`}
                   alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${obj?.foto?.data?.attributes?.caption}`}
                   className = {`image-slider ${i === index ? 'visible' : 'no-visible'}`}
                   key = {i}
+                  loading = 'lazy'
                   />
                   <h4>{obj.title}</h4>
                 </div>
@@ -84,6 +85,7 @@ function Carrousel({props}:any) {
         align-items: center;
         justify-content: center;
         margin-left: 24px;
+        position: relative;
       }
       .carImg{
         transition: .2s;

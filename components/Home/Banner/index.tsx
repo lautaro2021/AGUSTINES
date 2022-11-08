@@ -1,4 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react';
+import Image from 'next/image';
+import s from '../styles/banner.module.css'
 
 function Banner({props}:any) {
   const [flag, setFlag] = useState(false);
@@ -18,20 +20,24 @@ function Banner({props}:any) {
     window.addEventListener('resize', windowController);
   }, []);
 
-
   return (
     <div>
     {!flag 
     ?
-    <img
-    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.logo.data?.attributes?.url}`}
-    alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.logo.data?.attributes?.caption}`}
+    <Image
+    src = {  process.env.REACT_APP_API ? props?.logo?.data?.attributes?.url : `${'http://localhost:1337'}${props?.logo?.data?.attributes?.url}`}
+    alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'} ${props?.logo.data?.attributes?.caption}`}
+    className={s.image}
+    width = '2100px'
+    height = '470px'
     />
     :
-    <img
-    src = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.foto2.data?.attributes?.url}`}
+    <Image
+    src = {  process.env.REACT_APP_API ? props?.foto2?.data?.attributes?.url : `${'http://localhost:1337'}${props?.foto2?.data?.attributes?.url}`}
     alt = {`${process.env.REACT_APP_API || 'http://localhost:1337'}${props?.foto2.data?.attributes?.caption}`}
-    className = 'foto2'
+    className={s.image}
+    width = '750px'
+    height = '750px'
     />
     }
     
@@ -41,14 +47,7 @@ function Banner({props}:any) {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      img{
-        width: 100%;
-        user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
+        position: relative
       }
     `}</style>
     </div>
